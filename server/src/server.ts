@@ -2,10 +2,12 @@ import express from 'express';
 import logging from './config/logging';
 import config from './config/config';
 import sampleRoutes from './routes/sample';
-import router from './routes/sample';
+import cors from 'cors';
 
 const NAMESPACE = 'Server';
 const app = express();
+const server = config.server;
+const database = config.database;
 
 //$ Logging requests
 app.use((req, res, next) => {
@@ -27,6 +29,7 @@ app.use((req, res, next) => {
 //$ Parse Requests
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors());
 
 //$ Rules of API
 app.use((req, res, next) => {
@@ -58,9 +61,6 @@ app.use((req, res, next) => {
 });
 
 //$ Create Server
-app.listen(config.server.port, () => {
-	logging.info(
-		NAMESPACE,
-		`Server running on ${config.server.hostname}:${config.server.port}`
-	);
+app.listen(server.port, () => {
+	logging.info(NAMESPACE, `Server running on $server.hostname}:${server.port}`);
 });
