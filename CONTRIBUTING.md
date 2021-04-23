@@ -7,7 +7,7 @@ First off, thank you thank you!
 <ol>
   <li>Fork the repo</li>
   <li>Run yarn setup which will install all dependencies needed</li>
-  <li>Create a branch<li>
+  <li>Create a branch</li>
 </ol>
 
 > Tip: Keep your `main` branch pointing at the original repository and make
