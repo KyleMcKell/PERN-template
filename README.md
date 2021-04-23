@@ -1,5 +1,5 @@
 # PERN template
 
-Based largely on The Nerdy Canuck's [template](https://www.youtube.com/watch?v=vyz47fUXcxU) for REST API backends: 
+Based largely on The Nerdy Canuck's [video](https://www.youtube.com/watch?v=vyz47fUXcxU) and his template for REST API backends. 
 
-Currently using Create React App on the frontend
+Currently using Create React App on the frontend.
