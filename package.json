@@ -5,6 +5,11 @@
 	"author": "Kyle McKell <46072760+KyleMcKell@users.noreply.github.com>",
 	"license": "MIT",
 	"scripts": {
-		"setup": "cd server && yarn && cd ../client && yarn && cd .."
+		"client-install": "yarn install --prefix client",
+		"server-install": "yarn install --prefix server",
+		"setup": "yarn server-install && yarn client-install"
+	},
+	"dependencies": {
+		"concurrently": "^6.0.2"
 	}
 }
