@@ -5,9 +5,12 @@
 	"author": "Kyle McKell <46072760+KyleMcKell@users.noreply.github.com>",
 	"license": "MIT",
 	"scripts": {
-		"client-install": "yarn install --prefix client",
-		"server-install": "yarn install --prefix server",
-		"setup": "yarn server-install && yarn client-install"
+		"client-install": "yarn --cwd client",
+		"server-install": "yarn --cwd server",
+		"setup": "yarn && yarn server-install && yarn client-install",
+		"server": "yarn --cwd server start",
+		"client": "yarn --cwd client start",
+		"dev": "concurrently \"yarn server\" \"yarn client\""
 	},
 	"dependencies": {
 		"concurrently": "^6.0.2"
