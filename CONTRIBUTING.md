@@ -14,7 +14,7 @@ First off, thank you thank you!
 > pull requests from branches on your fork. To do this, run:
 >
 > ```
-> git remote add upstream https://github.com/kentcdodds/react-fundamentals.git
+> git remote add upstream https://github.com/KyleMcKell/PERN-template.git
 > git fetch upstream
 > git branch --set-upstream-to=upstream/main main
 > ```
